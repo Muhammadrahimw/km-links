@@ -66,10 +66,28 @@ export default async function Home() {
 					},
 			  ];
 	return (
-		<main className="min-h-dvh flex justify-center">
-			<div className="w-full max-w-4xl px-4 sm:px-6 md:px-8 py-10">
+		<main className="min-h-dvh flex justify-center bg-white">
+			<video
+				autoPlay
+				muted
+				loop
+				playsInline
+				className="absolute top-0 left-0 w-full h-full object-cover">
+				<source src="/bg-video.mp4" type="video/mp4" />
+			</video>
+			<div className="absolute top-0 left-0 w-full h-full backdrop-blur-3xl bg-[#ffffff27]"></div>
+			<div className="w-full max-w-[36rem] px-4 sm:px-6 md:px-8 py-10 text-xl pt-20 relative z-20 mt-12">
+				<video
+					autoPlay
+					muted
+					loop
+					playsInline
+					className="absolute top-0 left-0 w-full h-full object-cover rounded-t-3xl">
+					<source src="/bg-video.mp4" type="video/mp4" />
+				</video>
 				<div className="flex flex-col items-center gap-3">
 					<div
+						className="z-10 bg-[#0a3d699d] backdrop-blur-md"
 						style={{
 							display: "flex",
 							justifyContent: "center",
@@ -78,27 +96,19 @@ export default async function Home() {
 							overflow: "hidden",
 							width: "150px",
 							height: "150px",
-							backgroundColor: "#0a3c69",
 						}}>
 						{logo && (
 							<Image
+								className="z-10"
 								width={102}
 								height={70}
 								src={logo}
 								alt={`${received.name ?? handle} logo`}
-								style={{
-									height: "70px",
-									backgroundColor: "#0a3c69",
-								}}
 							/>
 						)}
 					</div>
 
-					<h1
-						className="text-base font-medium"
-						style={{color: "#777777", fontWeight: "bold"}}>
-						{handle}
-					</h1>
+					<h1 className="text-xl font-medium text-white z-10">{handle}</h1>
 				</div>
 
 				<section className="mt-6 space-y-4">
@@ -115,7 +125,7 @@ export default async function Home() {
 				</section>
 
 				<div className="my-8 flex items-center" aria-hidden>
-					<div className="h-px w-[20em] mx-auto bg-black/10" />
+					<div className="h-px w-[20em] mx-auto bg-gray-500 z-10" />
 				</div>
 
 				<section className="space-y-4">
