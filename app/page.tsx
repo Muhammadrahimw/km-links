@@ -72,10 +72,10 @@ export default async function Home() {
 				muted
 				loop
 				playsInline
-				className="absolute top-0 left-0 w-full h-full object-cover">
-				<source src="/bg-video.mp4" type="video/mp4" />
+				className="fixed top-0 left-0 w-full h-full object-cover">
+				<source src="/bg-video-no_audio.mp4" type="video/mp4" />
 			</video>
-			<div className="absolute top-0 left-0 w-full h-full backdrop-blur-3xl bg-[#ffffff27]"></div>
+			<div className="fixed top-0 left-0 w-full h-full backdrop-blur-3xl bg-[#ffffff27]"></div>
 			<div className="w-full max-w-[36rem] px-4 sm:px-6 md:px-8 py-10 text-xl pt-20 relative z-20 mt-12">
 				<video
 					autoPlay
@@ -83,11 +83,11 @@ export default async function Home() {
 					loop
 					playsInline
 					className="absolute top-0 left-0 w-full h-full object-cover rounded-t-3xl">
-					<source src="/bg-video.mp4" type="video/mp4" />
+					<source src="/bg-video-no_audio.mp4" type="video/mp4" />
 				</video>
 				<div className="flex flex-col items-center gap-3">
 					<div
-						className="z-10 bg-[#0a3d699d] backdrop-blur-md"
+						className="z-10 bg-[#0a3d69be] backdrop-blur-md"
 						style={{
 							display: "flex",
 							justifyContent: "center",
